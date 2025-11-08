@@ -11,40 +11,29 @@ import Link from "next/link";
 export default function Home() {
   return (
     <main className="min-h-screen flex flex-col items-center">
-      <div className="flex-1 w-full flex flex-col gap-20 items-center">
-        <nav className="w-full flex justify-center border-b border-b-foreground/10 h-16">
-          <div className="w-full max-w-5xl flex justify-between items-center p-3 px-5 text-sm">
-            <div className="flex gap-5 items-center font-semibold">
-              <Link href={"/"}>Next.js Supabase Starter</Link>
-              <div className="flex items-center gap-2">
-                <DeployButton />
-              </div>
-            </div>
-            {!hasEnvVars ? <EnvVarWarning /> : <AuthButton />}
+      {/*Top section*/}
+      <div className="relative w-full p-2">
+        <img 
+          src={'/Canada_web.svg'}
+          alt="Canada Flag"
+          className="absolute top-2 left-2 w-40 h-20"
+        />
+      {/*Title*/}
+        <div className="flex items-center justify-center mt-28 p-2">
+          <h1 className="w-full text-center font-bold tracking-tight 
+               text-5xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight mt-8"> 
+            Beans are us
+          </h1>
+          <div className="absolute mt-60">
+                <Link href="/auth/login">
+                  <button className="bg-red-600 text-white px-6 py-3 rounded-lg text-lg font-semibold hover:bg-red-700 transition" >
+                  Sign in
+                  </button>
+                </Link>
           </div>
-        </nav>
-        <div className="flex-1 flex flex-col gap-20 max-w-5xl p-5">
-          <Hero />
-          <main className="flex-1 flex flex-col gap-6 px-4">
-            <h2 className="font-medium text-xl mb-4">Next steps</h2>
-            {hasEnvVars ? <SignUpUserSteps /> : <ConnectSupabaseSteps />}
-          </main>
         </div>
-
-        <footer className="w-full flex items-center justify-center border-t mx-auto text-center text-xs gap-8 py-16">
-          <p>
-            Powered by{" "}
-            <a
-              href="https://supabase.com/?utm_source=create-next-app&utm_medium=template&utm_term=nextjs"
-              target="_blank"
-              className="font-bold hover:underline"
-              rel="noreferrer"
-            >
-              Supabase
-            </a>
-          </p>
-          <ThemeSwitcher />
-        </footer>
+      </div>
+      <div className="flex-1 w-full flex flex-col gap-20 items-center">
       </div>
     </main>
   );
