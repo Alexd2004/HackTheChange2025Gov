@@ -61,8 +61,8 @@ export default function Page() {
           priority
         />
         <div className="space-y-6">
-          <h1 className="text-4xl font-semibold tracking-tight text-primary sm:text-5xl md:text-6xl">
-            Beans are us
+          <h1 className="text-4xl  tracking-tight text-primary sm:text-5xl md:text-6xl">
+            UrbanSignal
           </h1>
           <p className="mx-auto max-w-2xl text-base text-muted-foreground sm:text-lg">
             Empowering communities with equitable access to essential resources.

@@ -12,7 +12,6 @@ import {
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 
@@ -54,8 +53,8 @@ export function LoginForm({
         alt="Canada Flag"
         className="fixed top-2 left-2 w-40 h-20"
         />
-        <h1 className="w-full text-center font-bold tracking-tight text-4xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight"> 
-          Beans are us
+        <h1 className="w-full text-center tracking-tight text-4xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight"> 
+          UrbanSignal
         </h1>
         <div className="flex items-center justify-center p-2">
           <Card>

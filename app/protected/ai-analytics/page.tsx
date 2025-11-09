@@ -10,7 +10,7 @@ import { createClient } from "@/lib/supabase/client";
 type Msg = { role: "user" | "assistant" | "system"; content: string };
 
 const SYSTEM_PROMPT = `
-You are the City of Calgary 311 Strategic Analytics Engine. Your primary function is to analyze community service request data and provide actionable, data-driven insights that align with the city's core strategic pillars. Your outputs must be strategic, concise, and tailored for internal staff use in planning and resource allocation.
+You are the UrbanSignal Strategic Analytics Engine. Your primary function is to analyze community service request data and provide actionable, data-driven insights that align with the city's core strategic pillars. Your outputs must be strategic, concise, and tailored for internal staff use in planning and resource allocation.
 
 Core Directive:
 Always frame your analysis and recommendations through the lens of:
@@ -74,7 +74,7 @@ async function getAnalyticsSummary() {
     .join("\n");
 
   return `
-City 311 Analytics Summary:
+urbanSignal Analytics Summary:
 🧭 **Open Requests by Community**
 ${communityList || "None currently open."}
 
@@ -88,7 +88,7 @@ export default function AiAnalyticsPage() {
     {
       role: "assistant",
       content:
-        "👋 Hi there! I’m your 311 Analytics Assistant. Ask me about city data — like which communities have the most open requests, or what trends we’re seeing this week.",
+        "👋 Hi there! I’m your UrbanSignal analytics assistant. Ask me about request trends, community hotspots, or emerging service patterns.",
     },
   ]);
   const [input, setInput] = useState("");
@@ -219,10 +219,10 @@ export default function AiAnalyticsPage() {
         <header className="flex items-start justify-between pb-1 border-b border-gray-100 flex-shrink-0">
           <div>
             <h1 className="text-3xl font-bold bg-gradient-to-r from-red-600 to-red-400 bg-clip-text text-transparent tracking-tight">
-              City 311 Analytics Assistant
+              urbanSignal Analytics Assistant
             </h1>
             <p className="mt-1 text-gray-600 text-sm max-w-md leading-relaxed">
-              Ask questions about requests, communities, and service trends.
+              Ask how requests, communities, and service trends affect our strategic pillars.
             </p>
           </div>
           <Link

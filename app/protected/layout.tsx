@@ -25,7 +25,7 @@ export default function ProtectedLayout({
               href="/"
               className="flex flex-1 justify-center text-4xl text-gray-900"
             >
-              Leeam Demons
+              UrbanSignal
             </Link>
             <div className="flex flex-1 items-center justify-end">
               <Link
