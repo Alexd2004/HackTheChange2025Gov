@@ -219,7 +219,7 @@ export default function AiAnalyticsPage() {
         <header className="flex items-start justify-between pb-1 border-b border-gray-100 flex-shrink-0">
           <div>
             <h1 className="text-3xl font-bold bg-gradient-to-r from-red-600 to-red-400 bg-clip-text text-transparent tracking-tight">
-              urbanSignal Analytics Assistant
+              UrbanSignal Analytics Assistant
             </h1>
             <p className="mt-1 text-gray-600 text-sm max-w-md leading-relaxed">
               Ask how requests, communities, and service trends affect our strategic pillars.
