@@ -1,3 +1,14 @@
+// app/protected/requests/request/[id]/page.tsx
+// import { notFound } from "next/navigation";
+// import { RetrieveRequestById } from "@/lib/supabase/supabaseCall";
+// import RequestClient from "./RequestClient";
+
+// export default async function RequestPage({ params }: { params: { id: string } }) {
+//   const request = await RetrieveRequestById(params.id);
+//   if (!request) notFound();
+
+//   return <RequestClient request={request} />;
+// }
 import Image from "next/image";
 import { notFound } from "next/navigation";
 
@@ -71,27 +82,22 @@ export default async function Request(props: RequestPageProps) {
         </div>
 
         <div className="flex flex-1 flex-col gap-4">
-            {/* 
-                In this block, we should have title , location, type dat
-            */}
-
-
-            
+          <h1 className="w-full text-left justify-center font-bold"> 
+          {title}, {location}. Requested by spic </h1> 
+          <h2 className="text-x1 text-gray-800"> 
+          Description of request: {description} 
+          </h2>
         </div>
       </header>
-
-        {/* Below the image, do not use this design as it looks pretty ugly
-            1. Needs to have a description of the issue
-            2. Needs to also have 2 buttons, 1 being the ability to change the state - (Open to Closed)
-            3. And the other to save the changes. 
-        
-        */}
-      <article className="flex flex-col gap-4">
-        
-        {/* <h2 className="text-xl font-semibold text-gray-900">Description</h2>
-        <p className="text-base leading-relaxed text-gray-700">{description}</p> */}
-      </article>
-
+        <article className="mx-left w-full max-w-sm flex gap-4 mt-2">
+          <button className="flex-1 flex items-center justify-center gap-2 bg-blue-600 text-white py-3 rounded-lg text-lg font-semibold hover:bg-blue-700 transition">
+            <img width="18"src="/drop_menu_arrow.png" height="18" alt=""></img>
+            Update Status
+          </button>
+          <button className="flex-1 bg-red-600 text-white px-2 py-2 rounded-lg text-lg font-semibold hover:bg-red-700 transition" > 
+            Save 
+          </button>
+        </article>
     </section>
   );
 }
